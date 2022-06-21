@@ -2,7 +2,7 @@
 Building a REST APIs with Fastify(NodeJS) and connect with MongoDB to interact with stored restaurant information
   
 1. REST API architecture
-2. NodeJS & Fastify web framework: https://www.fastify.io/
+2. NodeJS & Fastify web framework: https://www.fastify.io/ or Express: https://expressjs.com/
 3. MangoDB database
   
   
