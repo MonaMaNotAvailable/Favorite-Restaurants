@@ -7,6 +7,14 @@ Building a REST APIs with Fastify(NodeJS) and connect with MongoDB to interact w
   
   
   
+/api/restaurants GET - Returns all restaurants in the datastore.
+/api/restaurants/:restaurantId GET - Returns a specific restaurant.
+/api/restaurants POST - Adds a new restaurant.
+/api/restaurants/:restaurantId PUT - Edits a restaurant.
+/api/restaurants/:restaurantId DELETE - Removes a restaurant.
+  
+  
+  
 Estimated finish time: 16 hours  
   
 -a README to run the API server  
@@ -23,3 +31,6 @@ Other features:
 Inspirations:  
 https://blog.bitsrc.io/how-to-build-rest-apis-with-fastify-2eac64536a72  
 https://www.educative.io/answers/how-to-build-rest-apis-with-fastify  
+
+Important Definitions:
+Fastify: Fastify is a high-performance HTTP web framework for Nodejs, inspired by Express.js and Hapi.js.
