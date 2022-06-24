@@ -45,20 +45,16 @@ app.get("/api/restaurants/:restaurantId", (request, reply) => {
     })
 })
 
-//curl localhost:3000/api/restaurants -X POST --data "{'name': 'Tara Kitchen', 'style': 'Moroccan', 'address': '431 Liberty St, Schenectady, NY 12305', 'priceLevel':'2', 'recommend': 'Boneless Chicken Grilled', 'specialNote': 'Delicious'}"
+//curl --header "Content-Type: application/json" --request POST --data '{"name":"Tara Kitchen", "style": "Moroccan", "address": "431 Liberty St, Schenectady, NY 12305","priceLevel":"2","recommend": "Boneless Chicken Grilled", "specialNote": "Perfect lunch place"}' http://localhost:3000/api/restaurants
 
 //Add a new restaurant
 app.post("/api/restaurants", (request, reply) => {
     let restaurant = request.body
-    // let restaurant = new Restaurant();
-    // restaurant.name = request.body.name
-    // restaurant.style = request.body.style
-    //console.log(request.body)
-    console.log(restaurant)
+    //console.log(restaurant)
+    //console.log(JSON.stringify(restaurant))
     Restaurant.create(restaurant, (err, restaurant) => {
         if(!err) {
             reply.send(restaurant)
-            console.log(restaurant)
         } else {
             reply.send({ error: err })
         }
@@ -72,11 +68,11 @@ app.put("/api/restaurants/:restaurantId", (request, reply) => {
     Restaurant.findById(restaurantId, (err, restaurant) => {
         if(!err) {
             restaurant.name = newRestaurantEdit.name
-            /*restaurant.style = newRestaurantEdit.style
+            restaurant.style = newRestaurantEdit.style
             restaurant.address = newRestaurantEdit.address
             restaurant.priceLevel = newRestaurantEdit.priceLevel
             restaurant.recommend = newRestaurantEdit.recommend
-            restaurant.specialNote = newRestaurantEdit.specialNote*/
+            restaurant.specialNote = newRestaurantEdit.specialNote
             restaurant.save((er, savedRestaurant) => {
                 if(!er) {
                     reply.send(savedRestaurant)
