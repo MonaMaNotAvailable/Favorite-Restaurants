@@ -7,11 +7,11 @@ Building a REST APIs with Fastify(NodeJS) and connect with MongoDB to interact w
   
   
   
-/api/restaurants GET - Returns all restaurants in the datastore.
-/api/restaurants/:restaurantId GET - Returns a specific restaurant.
-/api/restaurants POST - Adds a new restaurant.
-/api/restaurants/:restaurantId PUT - Edits a restaurant.
-/api/restaurants/:restaurantId DELETE - Removes a restaurant.
+/api/restaurants GET - Returns all restaurants in the datastore.  
+/api/restaurants/:restaurantId GET - Returns a specific restaurant.  
+/api/restaurants POST - Adds a new restaurant.  
+/api/restaurants/:restaurantId PUT - Edits a restaurant.  
+/api/restaurants/:restaurantId DELETE - Removes a restaurant.  
   
   
   
